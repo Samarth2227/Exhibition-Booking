@@ -1,0 +1,60 @@
+
+<html>
+<head>
+	<style>
+    body{
+      height:100vh;
+      background-color: #8cbef0;
+    background-image: linear-gradient(43deg, #3b7979 0%, #f7f2f6 46%, #0bebdf 100%);
+    }
+		 * {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 50%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    
+	</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The form -->
+<form class="example" action="search.php">
+  <input type="text" placeholder="Search." name="text">
+  
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</body>
+</html>

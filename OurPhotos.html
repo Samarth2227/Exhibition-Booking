@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });  
+    </script>
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(3, 3, 3);
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #fcfffe;
+            color: rgb(0, 0, 0);
+        }
+
+        #panel,
+        #flip {
+            padding: 50px;
+            text-align: center;
+            font-size: x-large;
+            background-color: #8f9393;
+            border: solid 1px #070707;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body bgcolor="black">
+    <div class="topnav">
+        <a href="Home_Page.html">Home</a>
+        <a class="active" href="OurPhotos.html">Our Photos</a>
+      </div>
+    <div id="flip">Our Photos</div>
+    <div id="panel"><img src="img\schedule\cricket.jpg" alt="">
+        <img src="img\schedule\jewellary.jpg" alt="">
+        <img src="img\schedule\knowledge.jpg" alt="">
+        <img src="img\schedule\music.jpg" alt="">
+        <img src="img\schedule\charity.jpg" alt="">
+        <img src="img\schedule\basketball.jpg" alt="">
+        <img src="img\schedule\seminar.jpg" alt="">
+        <img src="img\schedule\sports.jpg" alt="">
+        <img src="img\schedule\trade show.jpg" alt="">
+        <img src="img\schedule\workshops" alt="">
+    </div>
+    <br>
+    <br>
+    <h2 style="color:#ddd; text-align: center;" >Click "Our Photos" for Event images </h2>
+
+</body>
+
+</html>

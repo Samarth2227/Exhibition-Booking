@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Contact Us</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+
+  <!--== CSS Files ==-->
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="css/mystyle.css" rel="stylesheet" media="screen">
+  <link href="css/font-awesome.css" rel="stylesheet" media="screen">
+  <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+  <link href="css/flexslider.css" rel="stylesheet" media="screen">
+  <link href="css/fancySelect.css" rel="stylesheet" media="screen">
+  <link href="css/responsive.css" rel="stylesheet" media="screen">
+
+  <!--== Google Fonts ==-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <section id="contact" class="mapWrap">
+    <div id="googleMap" style="width:100%;"></div>
+    <div id="contact-area">
+      <div class="container">
+        <h2 class="block_title">Hey !!!</h2>
+        <div class="row">
+          <div class="col-xs-12">
+          </div>
+          <div class="col-sm-6">
+            <h2 class="con-title">Contact us</h2>
+            <button type="submit" class="btn medium"><a href="OurPhotos.html">Our Photos</a></button>
+            <!-- <a href="" class="" style="color: white;">Gallery</a> -->
+            <br><br>
+            <form action="mycontact.php" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control" id="user_name" placeholder="Enter your name" name="cname">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="your_email" placeholder="Enter your email" name="cmail">
+              </div>
+              <div class="form-group">
+                <input id="state" class="form-control" name="ustate" placeholder="Choose State" type="text">
+                <select class="form-control" onchange="myfun(this.value)">
+                  <option>Select Options</option>
+                  <option>Maharashtra</option>
+                  <option>Gujarat</option>
+                  <option>Rajasthan</option><br><br><br>
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <input class="form-control" name="ucity" placeholder="Choose City" type="text">
+                <select class="form-control" id = "city">
+                  <option>Select Options</option>
+                </select> 
+              </div>
+
+
+
+              <div class="form-group">
+                <input type="message" class="form-control" id="user_message" name="cmessage">
+              </div>
+              <button type="submit" class="btn medium">Let us know</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+      function myfun(data) {
+        alert(data);
+
+        var req = new XMLHttpRequest();
+        req.open("GET", "http://localhost/PHP/WD%20project/response.php?datavalue=" + data, true);
+        req.send();
+
+        req.onreadystatechange = function(){
+          if(req.readyState == 4 && req.status == 200){
+            document.getElementById('city').innerHTML = req.responseText;
+          }
+        }
+
+      }
+
+    </script>
+</body>
+
+</html>

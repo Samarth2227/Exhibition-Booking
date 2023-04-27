@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1 style="color: blue;" class = "header">Create Your Account Here!!!</h1><hr>
+    <input type ="email" class ="box" placeholder="Email" id="" name="umail"><br><br>
+    
+    <input type ="password" class = "box" placeholder="password" id="password" 
+    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    title="Must contain at least one number and one uppercase and lowercase letter, 
+    and at least 8 or more characters" required onkeyup='myFunction();'><br><br>      
+    <script>
+            function myFunction() {
+            var x = document.getElementById('password').required;   
+        }
+    </script>
+    <input type="submit" class="sbutton" placeholder="submit" name="submitbutton">
+    <p class="footer">Don't have an account? <a href="register.html">Sign up </p>
+</body>
+</html>
